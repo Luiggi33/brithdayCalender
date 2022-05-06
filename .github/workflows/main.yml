@@ -16,5 +16,5 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: 'web'
-        remoteDir: '/var/www/app/'
+        remoteDir: '/var/www/website/'
         excludeMode: 'remove'
