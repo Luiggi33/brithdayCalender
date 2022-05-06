@@ -15,6 +15,6 @@ jobs:
         port: 22
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localDir: '/www/'
-        remoteDir: '/var/www/app'
+        localDir: '/web/'
+        remoteDir: '/var/www/app/'
         excludeMode: 'remove'
