@@ -9,10 +9,12 @@ jobs:
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: wangyucode/sftp-upload-action@v1.2
       with:
-        server: ${{ secrets.FTP_SERVER }}
+        host:  ${{ secrets.FTP_SERVER }}
+        port: 22
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        protocol: ftps-legacy
-        server-dir: github-website/
+        localDir: '/www/'
+        remoteDir: '/var/www/app'
+        excludeMode: 'remove'
